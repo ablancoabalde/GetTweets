@@ -1,0 +1,19 @@
+<div class="main">
+  <ul class="listTweets">
+    <li class="tweet" *ngFor="let tweet of tweets">
+      <h3 class="title-list pb-2">@{{ tweet.user.name }}</h3>
+      <p>Creado: {{ tweet.created_at }}</p>
+      <p>{{ tweet.full_text }}</p>
+      <p>Ubicación: {{ tweet.user.location }}</p>
+      <p>Descripción: {{ tweet.user.description }}</p>
+      <ul class="listTweets">
+        <li
+          class="hashtag-tweet"
+          *ngFor="let hashtag of tweet.entities.hashtags"
+        >
+          <p>#{{ hashtag.text }}</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,14 @@
+<header class="header">
+  <div class="searchbar">
+    <input
+      class="search-input"
+      type="text"
+      placeholder="Search"
+      [(ngModel)]="word"
+      (keyup.enter)="selectWord()"
+    />
+    <a class="search-icon" (click)="selectWord()"
+      ><i class="fa fa-search"></i
+    ></a>
+  </div>
+</header>
